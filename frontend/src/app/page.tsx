@@ -40,12 +40,12 @@ export default async function Home() {
 
         <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 backdrop-blur-sm  rounded-full text-slate-600 text-sm mb-8 animate-fadeInUp">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 backdrop-blur-sm  rounded-full text-slate-600 text-sm mb-8 animate-fadeInUp">
             Rent Anything, Anywhere
-          </div>
+          </div> */}
 
           {/* Main Heading */}
-          <h1
+          {/* <h1
             className="text-slate-900 dark:text-white text-5xl md:text-6xl font-bold mb-6 max-w-4xl mx-auto animate-fadeInUp leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
@@ -63,7 +63,7 @@ export default async function Home() {
           >
             Discover verified rentals for homes, hotels, vehicles, equipment,
             and event spaces. One platform for all your rental needs.
-          </p>
+          </p> */}
 
           {/* Search Bar */}
           <div className="animate-fadeInUp" style={{ animationDelay: "0.3s" }}>
