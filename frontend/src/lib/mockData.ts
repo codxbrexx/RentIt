@@ -251,36 +251,7 @@ export const mockProperties: Property[] = [
       "Free cancellation up to 45 days before move-in. 25% refund if cancelled within 45 days.",
     area: 2800,
   },
-  {
-    id: "7",
-    title: "Royal Enfield Classic 350",
-    type: "vehicle",
-    location: {
-      city: "Bangalore",
-      area: "Indiranagar",
-      state: "Karnataka",
-      pincode: "560038",
-    },
-    price: {
-      amount: 1200,
-      period: "night", // effectively daily
-    },
-    images: ["https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=800"],
-    amenities: ["Helmet Included", "Insurance", "Full Tank"],
-    verified: true,
-    rating: 4.8,
-    reviews: 45,
-    available: true,
-    description:
-      "Well maintained Royal Enfield Classic 350. Perfect for long rides.",
-    host: {
-      name: "Bike Rentals Bangalore",
-      verified: true,
-      joinedDate: "2021-05-10",
-    },
-    rules: ["Valid Driving License required", "Deposit: ₹2000"],
-    cancellationPolicy: "Free cancellation 24hrs before.",
-  },
+
   {
     id: "8",
     title: "Canon EOS 5D Mark IV Kit",
@@ -378,36 +349,7 @@ export const mockProperties: Property[] = [
     cancellationPolicy: "50% charge if cancelled within 3 days.",
     area: 1200,
   },
-  {
-    id: "11",
-    title: "Harley Davidson Iron 883",
-    type: "vehicle",
-    location: {
-      city: "Goa",
-      area: "Anjuna",
-      state: "Goa",
-      pincode: "403509",
-    },
-    price: {
-      amount: 3500,
-      period: "night",
-    },
-    images: ["https://images.unsplash.com/photo-1558981806-ec527fa84c3d?w=800"],
-    amenities: ["Helmet", "Riding Jacket (Extra)", "GPS Mount"],
-    verified: true,
-    rating: 4.8,
-    reviews: 56,
-    available: true,
-    description:
-      "Cruiser bike for exploring Goa in style. Excellent condition.",
-    host: {
-      name: "Goa Bike Hire",
-      verified: true,
-      joinedDate: "2021-11-20",
-    },
-    rules: ["Valid License", "Security Deposit: ₹5000"],
-    cancellationPolicy: "Free cancellation 48hrs before.",
-  },
+
   {
     id: "12",
     title: "Wedding Lawn with Banquet",
@@ -446,26 +388,37 @@ export const mockProperties: Property[] = [
 export const mockBookings: Booking[] = [
   {
     id: "B001",
-    propertyId: "1",
-    propertyTitle: "3 BHK Spacious Apartment in Koramangala",
-    checkIn: "2025-02-01",
-    checkOut: "2025-08-01",
+    listingId: "1",
+    renterId: "U001",
+    hostId: "H001",
+    startDate: "2025-02-01T00:00:00Z",
+    endDate: "2025-08-01T00:00:00Z",
+    subtotal: 210000,
+    serviceFee: 10500,
     totalAmount: 245000,
-    status: "upcoming",
-    propertyImage:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400",
-  },
-  {
-    id: "B002",
-    propertyId: "3",
-    propertyTitle: "Luxury Hotel Suite - Central Delhi",
-    checkIn: "2024-12-15",
-    checkOut: "2024-12-18",
-    totalAmount: 13500,
-    status: "completed",
-    propertyImage:
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400",
-  },
+    currency: "INR",
+    status: "confirmed",
+    message: "Looking forward to stay",
+    createdAt: "2025-01-20T10:00:00Z",
+    updatedAt: "2025-01-21T10:00:00Z",
+    listing: mockProperties[0],
+    host: {
+      id: "H001",
+      name: "Rajesh Kumar",
+      email: "host@example.com",
+      phone: "",
+      verified: true,
+      joinedDate: "2022-03-15"
+    },
+    renter: {
+      id: "U001",
+      name: "Ankit Verma",
+      email: "ankit@example.com",
+      phone: "",
+      verified: true,
+      joinedDate: "2024-01-01"
+    }
+  }
 ];
 
 export const mockUser: User = {

@@ -195,8 +195,48 @@ export const api = {
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         localStorage.removeItem("user");
-
       }
     }
   },
+  bookings: {
+    getUserBookings: async (): Promise<import("@/types").Booking[]> => {
+      const res = await fetchWithAuth("/bookings/my-bookings");
+      if (!res.ok) throw new Error("Failed to fetch bookings");
+      return await res.json();
+    },
+    getHostBookings: async (): Promise<import("@/types").Booking[]> => {
+      const res = await fetchWithAuth("/bookings/host-bookings");
+      if (!res.ok) throw new Error("Failed to fetch host bookings");
+      return await res.json();
+    },
+    getById: async (id: string) => {
+      const res = await fetchWithAuth(`/bookings/${id}`);
+      if (!res.ok) throw new Error("Failed to fetch booking");
+      return await res.json();
+    },
+    create: async (data: any): Promise<{ id: string; status: string }> => {
+      const res = await fetchWithAuth("/bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to create booking");
+      return await res.json();
+    },
+    updateStatus: async (id: string, status: string, reason?: string) => {
+      const res = await fetchWithAuth(`/bookings/${id}/status`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status, reason }),
+      });
+      if (!res.ok) throw new Error("Failed to update status");
+      return res.json();
+    },
+    getBookedDates: async (listingId: string) => {
+      const res = await fetchWithAuth(`/bookings/listing/${listingId}/dates`);
+      if (!res.ok) return [];
+      return res.json();
+    }
+  }
 };

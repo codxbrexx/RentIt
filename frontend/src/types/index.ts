@@ -1,7 +1,7 @@
 export interface Property {
   id: string;
   title: string;
-  type: "house" | "hotel" | "vehicle" | "equipment" | "event";
+  type: "house" | "hotel" | "equipment" | "event";
   location: {
     city: string;
     area: string;
@@ -33,13 +33,22 @@ export interface Property {
 
 export interface Booking {
   id: string;
-  propertyId: string;
-  propertyTitle: string;
-  checkIn: string;
-  checkOut: string;
+  listingId: string;
+  renterId: string;
+  hostId: string;
+  startDate: string;
+  endDate: string;
+  subtotal: number;
+  serviceFee: number;
   totalAmount: number;
-  status: "upcoming" | "completed" | "cancelled";
-  propertyImage: string;
+  currency: string;
+  status: 'pending' | 'confirmed' | 'rejected' | 'cancelled';
+  message?: string;
+  createdAt: string;
+  updatedAt: string;
+  listing: Property;
+  host: User;
+  renter: User;
 }
 
 export interface User {

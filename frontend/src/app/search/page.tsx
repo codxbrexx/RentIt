@@ -129,7 +129,7 @@ function SearchResultsContent() {
             <span>
               {category === "house" && "House Rentals"}
               {category === "hotel" && "Hotels & Stays"}
-              {category === "vehicle" && "Vehicle Rentals"}
+
               {category === "equipment" && "Equipment Rentals"}
               {category === "event" && "Event Spaces"}
             </span>

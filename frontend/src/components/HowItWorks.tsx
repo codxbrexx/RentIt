@@ -31,7 +31,7 @@ export function HowItWorks() {
     <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="text-center mb-16">
         <h2 className="mb-4 text-3xl font-bold text-[#0F172A] dark:text-white">
-          How RentIt Works
+          How Rentit Works
         </h2>
         <p className="text-[#475569] dark:text-slate-400 text-lg">
           Get started in 3 simple steps

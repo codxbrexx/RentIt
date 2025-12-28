@@ -6,21 +6,16 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
     {
         category: "General",
-        question: "What makes RentIt different from other platforms?",
+        question: "What makes Rentit different from other platforms?",
         answer:
-            "RentIt is your all-in-one rental solution. Unlike other niche platforms, we allow you to rent homes, hotels, vehicles, cameras, and even event spaces all in one place, with a single trusted account.",
+            "Rentit is your all-in-one rental solution. Unlike other niche platforms, we allow you to rent homes, hotels, cameras, and even event spaces all in one place, with a single trusted account.",
     },
-    {
-        category: "Rentals",
-        question: "How does the vehicle rental insurance work?",
-        answer:
-            "All vehicle rentals on RentIt come with basic third-party liability insurance. For comprehensive coverage, renters can opt-in for our 'RentIt Secure' protection plan at checkout, which covers damages and theft.",
-    },
+
     {
         category: "Bookings",
         question: "Is there a security deposit required?",
         answer:
-            "For high-value items like luxury cars or camera gear, hosts may require a security deposit. This amount is blocked on your card (not charged) and released 24 hours after the item is returned in good condition.",
+            "For high-value items like camera gear, hosts may require a security deposit. This amount is blocked on your card (not charged) and released 24 hours after the item is returned in good condition.",
     },
     {
         category: "Hosting",
@@ -32,7 +27,7 @@ const faqs = [
         category: "Support",
         question: "What if the item I rented is not as described?",
         answer:
-            "We have a 'RentIt Guarantee'. If the item differs significantly from the listing, contact us within 2 hours of pickup/check-in. We will help you find a replacement or issue a full refund immediately.",
+            "We have a 'Rentit Guarantee'. If the item differs significantly from the listing, contact us within 2 hours of pickup/check-in. We will help you find a replacement or issue a full refund immediately.",
     },
 ];
 
@@ -45,9 +40,6 @@ export function FAQ() {
 
     return (
         <section className="py-24 relative overflow-hidden">
-            {/* Background blobs */}
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#1F4FD8]/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1DBF73]/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
                 <div className="text-center mb-16">
@@ -67,8 +59,8 @@ export function FAQ() {
                         <div
                             key={index}
                             className={`group rounded-2xl border transition-all duration-300 ${openIndex === index
-                                    ? "bg-white dark:bg-slate-900 border-gray-200 dark:border-[#4A6FE8] shadow-lg scale-[1.02]"
-                                    : "bg-white dark:bg-slate-900 border-gray-200 dark:border-slate-800 hover:border-[#1F4FD8]/50 dark:hover:border-[#4A6FE8]/50"
+                                ? "bg-white dark:bg-slate-900 border-gray-200 dark:border-[#4A6FE8] shadow-lg scale-[1.02]"
+                                : "bg-white dark:bg-slate-900 border-gray-200 dark:border-slate-800 hover:border-[#1F4FD8]/50 dark:hover:border-[#4A6FE8]/50"
                                 }`}
                         >
                             <button

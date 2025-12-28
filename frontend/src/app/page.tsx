@@ -4,7 +4,6 @@ import {
     Sparkles,
     ArrowRight,
     CheckCircle,
-    Car,
     Camera,
     Tent,
 } from "lucide-react";
@@ -39,8 +38,8 @@ export default async function Home() {
                 ></div>
 
                 <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-                    {/* Search Bar */}  
-                    <div className="animate-fadeInUp">
+                    {/* Search Bar */}
+                    <div className="animate-fadeInUp relative z-20">
                         <ModernSearchBar />
                     </div>
 
@@ -137,24 +136,7 @@ export default async function Home() {
                         </div>
                     </Link>
 
-                    {/* Vehicle Card */}
-                    <Link href="/search?category=vehicle" className="group">
-                        <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:shadow-large transition-all duration-500 h-[320px]">
-                            <div className="absolute inset-0">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxiaWtlfGVufDB8fHx8MTY4MTM3NjI4MA&ixlib=rb-4.1.0&q=80&w=1080"
-                                    alt="Vehicles"
-                                    fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                            </div>
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                <h3 className="text-white mb-1 text-xl font-bold">Vehicles</h3>
-                                <p className="text-gray-300 text-sm">Bikes & Cars</p>
-                            </div>
-                        </div>
-                    </Link>
+
 
                     {/* Equipment Card */}
                     <Link href="/search?category=equipment" className="group">
@@ -171,6 +153,25 @@ export default async function Home() {
                             <div className="absolute bottom-0 left-0 right-0 p-6">
                                 <h3 className="text-white mb-1 text-xl font-bold">Equipment</h3>
                                 <p className="text-gray-300 text-sm">Cameras & Tools</p>
+                            </div>
+                        </div>
+                    </Link>
+
+                    {/* Event Card */}
+                    <Link href="/search?category=event" className="group">
+                        <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:shadow-large transition-all duration-500 h-[320px]">
+                            <div className="absolute inset-0">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxldmVudCUyMGhhbGx8ZW58MHx8fHwxNjgxMzc2MzE1&ixlib=rb-4.1.0&q=80&w=1080"
+                                    alt="Events"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                                <h3 className="text-white mb-1 text-xl font-bold">Events</h3>
+                                <p className="text-gray-300 text-sm">Halls & Venues</p>
                             </div>
                         </div>
                     </Link>
@@ -237,8 +238,8 @@ export default async function Home() {
 
                     {/* Description */}
                     <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                        RentIt is now your one-stop destination for renting homes, hotels,
-                        vehicles, equipment, and even event spaces across India.
+                        Rentit is now your one-stop destination for renting homes, hotels,
+                        equipment, and even event spaces across India.
                     </p>
 
                     {/* CTA Buttons */}

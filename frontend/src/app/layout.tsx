@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata: Metadata = {
-  title: "RentIt - Find Your Perfect Home",
+  title: "Rentit - Find Your Perfect Home",
   description: "Discover verified properties with transparent pricing.",
 };
 
@@ -23,13 +23,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* Load Google Maps API Script - Defer loading */}
+        <script
+          async
+          defer
+          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`}
+        ></script>
       </head>
       <body
         className={`${inter.className} min-h-screen text-slate-600 antialiased selection:bg-[#1F4FD8] selection:text-white`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

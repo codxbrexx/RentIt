@@ -31,14 +31,12 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-6 group">
               <div className="flex flex-col">
-                <span className="font-[Manrope] text-lg text-slate-900 dark:text-white font-bold leading-none tracking-tight">
-                  RentIt
-                </span>
+                Rentit
               </div>
             </Link>
             <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-sm leading-relaxed text-sm">
-              RentIt is your one-stop platform for renting homes, hotels,
-              vehicles, equipment, and event spaces. Verified listings,
+              Rentit is your one-stop platform for renting homes, hotels,
+              equipment, and event spaces. Verified listings,
               transparent pricing.
             </p>
 
@@ -70,7 +68,7 @@ export function Footer() {
                 { label: "Explore Rentals", to: "/search" },
                 { label: "House Rentals", to: "/search?category=house" },
                 { label: "Hotels & Stays", to: "/search?category=hotel" },
-                { label: "Vehicle Rentals", to: "/search?category=vehicle" },
+
                 {
                   label: "Equipment Rentals",
                   to: "/search?category=equipment",
@@ -147,7 +145,7 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-200 dark:border-slate-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-500 dark:text-slate-400 text-xs text-center md:text-left font-medium">
-              &copy; 2025 RentIt. All rights reserved.
+              &copy; 2025 Rentit. All rights reserved.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 font-medium">
@@ -166,6 +164,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }

@@ -16,7 +16,7 @@ const testimonials = [
     name: "Rajesh Kumar",
     role: "Entrepreneur",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-    text: "Transparent pricing and no hidden fees. RentIt made my relocation to Mumbai stress-free.",
+    text: "Transparent pricing and no hidden fees. Rentit made my relocation to Mumbai stress-free.",
     rating: 5,
   },
   {
