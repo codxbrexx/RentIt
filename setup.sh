@@ -71,16 +71,12 @@ else
     echo -e "${GREEN}✓ Port 3001 is available${NC}"
 fi
 
-# ============================================
-# Root Dependencies
-# ============================================
-echo -e "\n${BLUE}Installing Root Dependencies...${NC}"
-npm install
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✓ Root dependencies installed${NC}"
+if lsof -i:4000 &> /dev/null; then
+    echo -e "${YELLOW}Port 4000 is in use. Killing process...${NC}"
+    fuser -k 4000/tcp 2>/dev/null || kill $(lsof -t -i:4000) 2>/dev/null
+    echo -e "${GREEN}✓ Port 4000 freed${NC}"
 else
-    echo -e "${RED}✗ Failed to install root dependencies${NC}"
-    exit 1
+    echo -e "${GREEN}✓ Port 4000 is available${NC}"
 fi
 
 # ============================================

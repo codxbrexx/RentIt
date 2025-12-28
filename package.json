@@ -4,13 +4,10 @@
     "description": "Renit Project Monorepo",
     "private": true,
     "scripts": {
-        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "install:all": "cd backend && npm install && cd ../frontend && npm install",
+        "dev": "(cd backend && npm run start:dev) & (cd frontend && npm run dev) && wait",
         "dev:backend": "cd backend && npm run start:dev",
         "dev:frontend": "cd frontend && npm run dev",
         "build": "cd backend && npm run build && cd ../frontend && npm run build"
-    },
-    "devDependencies": {
-        "concurrently": "^9.1.0"
     }
 }

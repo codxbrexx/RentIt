@@ -1,6 +1,6 @@
 import { Property } from "@/types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
 
 
 const getAuthHeaders = () => {
@@ -59,9 +59,23 @@ export const api = {
         listings = data;
       }
 
+      const parseAmenities = (amenities: any) => {
+        if (Array.isArray(amenities)) return amenities;
+        if (typeof amenities === 'string') {
+          try {
+            const parsed = JSON.parse(amenities);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch (e) {
+            return [];
+          }
+        }
+        return [];
+      };
+
       return listings.map((item: any) => ({
         ...item,
         images: item.images ? item.images.map((img: any) => img.url || img) : [],
+        amenities: parseAmenities(item.amenities),
         price: item.price || {
           amount: item.basePrice || 0,
           period: item.priceUnit === 'month' ? 'month' : 'night'
@@ -82,9 +96,24 @@ export const api = {
       if (!res.ok) throw new Error("Failed to fetch listing");
 
       const item = await res.json();
+
+      const parseAmenities = (amenities: any) => {
+        if (Array.isArray(amenities)) return amenities;
+        if (typeof amenities === 'string') {
+          try {
+            const parsed = JSON.parse(amenities);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch (e) {
+            return [];
+          }
+        }
+        return [];
+      };
+
       return {
         ...item,
         images: item.images ? item.images.map((img: any) => img.url || img) : [],
+        amenities: parseAmenities(item.amenities),
         price: item.price || {
           amount: item.basePrice || 0,
           period: item.priceUnit === 'month' ? 'month' : 'night'
