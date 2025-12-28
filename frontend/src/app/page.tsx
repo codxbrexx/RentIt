@@ -23,21 +23,26 @@ export default async function Home() {
     return (
         <div className="overflow-hidden min-h-screen">
             {/* Hero Section - Modern & Engaging */}
-            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-white to-slate-100 dark:from-slate-950 dark:to-slate-950">
-                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[520px] h-[520px] bg-slate-200/30 dark:bg-slate-800/20 rounded-full blur-[180px]" />
+            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0A0B1E] transition-colors duration-300">
+                {/* Background Effects */}
+                <div className="absolute inset-0 z-0">
+                    {/* Light Mode Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-slate-100 dark:hidden"></div>
+
+                    {/* Dark Mode Gradient */}
+                    <div className="absolute inset-0 hidden dark:block bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1a1c4b] via-[#0A0B1E] to-[#0A0B1E]"></div>
+
+                    {/* Grid Pattern - Subtle in both modes */}
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+                    {/* Ambient Glows */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] 
+                                    bg-blue-200/20 dark:bg-purple-900/30 rounded-[100%] blur-[100px] pointer-events-none" />
+                    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] 
+                                    bg-indigo-100/40 dark:bg-blue-900/20 rounded-full blur-[100px] pointer-events-none" />
                 </div>
 
-                {/* Pattern Overlay */}
-                <div
-                    className="absolute inset-0 opacity-5"
-                    style={{
-                        backgroundImage:
-                            'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-                    }}
-                ></div>
-
-                <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+                <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
                     {/* Search Bar */}
                     <div className="animate-fadeInUp relative z-20">
                         <ModernSearchBar />

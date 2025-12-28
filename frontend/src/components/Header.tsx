@@ -67,7 +67,7 @@ function HeaderContent() {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/70 dark:bg-[#020617]/70 backdrop-blur-xl border-b border-white/10 dark:border-white/5 transition-all duration-300 supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-[#020617]/60">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
 
           <Link href="/" className="flex items-center gap-2.5 group">
             <span className="font-[Manrope] text-2xl text-slate-900 dark:text-white font-extrabold tracking-tight">

@@ -36,7 +36,8 @@ export function TrustSection() {
         {items.map((item, index) => (
           <div
             key={index}
-            className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft hover:shadow-large hover:border-blue-200 hover:border-2 dark:hover:border-blue-500 border border-gray-100 dark:border-slate-800"
+            className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-soft hover:shadow-large hover:border-blue-100 hover:border-0.2 
+            dark:hover:border-blue-200 border border-gray-100 dark:border-slate-800 transition-all duration-500"
           >
             <div
               className={`w-14 h-14 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-4 transition-transform`}
